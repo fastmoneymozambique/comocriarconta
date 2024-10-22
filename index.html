@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como criar conta na Elephant Bet</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FFB6C1, #00BFFF); /* Gradiente de rosa e azul */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            border: 5px solid #2196F3;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+        }
+
+        h1 {
+            font-size: 50px; /* Tamanho da fonte aumentado */
+            margin-bottom: 15px;
+            font-family: 'Verdana', sans-serif;
+            color: red; /* Cor vermelha */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Efeito de sombra para profundidade */
+            animation: heartbeat 1.5s infinite; /* Efeito de batimento */
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #1976D2;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px; /* Ajuste para telas menores */
+            }
+
+            button {
+                width: 80%;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Como criar conta</h1> <!-- Título com efeito de batimento -->
+        <div class="video-container">
+            <video id="tutorialVideo" width="100%" controls>
+                <source src="video.mp4" type="video/mp4"> <!-- Substitua por seu vídeo -->
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </div>
+        <div id="question" class="hidden">
+            <p>Já sabes criar conta?</p>
+            <button id="yesButton">Sim, já sei</button>
+            <button id="noButton">Não, quero repetir o vídeo</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('tutorialVideo').addEventListener('ended', function() {
+            document.getElementById('question').classList.remove('hidden');
+        });
+
+        document.getElementById('yesButton').addEventListener('click', function() {
+            window.location.href = 'https://ganhamoneymoz.netlify.app/';
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            document.getElementById('tutorialVideo').currentTime = 0; // Reinicia o vídeo
+            document.getElementById('tutorialVideo').play(); // Reproduz o vídeo novamente
+            document.getElementById('question').classList.add('hidden'); // Esconde a pergunta
+        });
+    </script>
+</body>
+</html>
